@@ -4,8 +4,8 @@ pub struct Task {
 }
 
 impl Task {
-    pub fn new_task(name: String) -> Task {
-        Task{ name, done: false}
+    pub fn new_task(name: &String) -> Task {
+        Task{ name: name.to_string(), done: false}
     }
     
     pub fn name(&self) -> &String {
